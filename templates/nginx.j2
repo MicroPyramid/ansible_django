@@ -1,0 +1,35 @@
+upstream {{project_name}} {
+    server unix:///home/{{project_name}}/{{project_name}}.sock;
+}
+
+
+server {
+    listen       {{ server_port }};
+    server_name  {{ server_name }};
+    charset     utf-8;
+    client_max_body_size 75M;
+    error_log {{nginx_error_log}};
+
+    location / {
+        uwsgi_pass  {{project_name}};
+        include     uwsgi_params;
+    }
+
+    location /static {
+        alias /home/{{project_name}}/{{project_name}}/static;
+        expires 365d;
+    }
+
+
+    location /media {
+        alias /home/{{project_name}}/{{project_name}}/media;
+        expires 365d;
+    }
+
+    location /player/private/media/ {
+       alias /home/{{project_name}}/{{project_name}}/media/;
+    }
+
+location /robots.txt { root /home/{{project_name}}/{{project_name}}/static/; }
+location /favicon.ico { root /home/{{project_name}}/{{project_name}}/static/; }
+}

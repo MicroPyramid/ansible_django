@@ -1,0 +1,6 @@
+[program:uwsgi-runner]
+stdout_logfile = /var/log/supervisor/uwsgi-runner-out.log
+stderr_logfile = /var/log/supervisor/uwsgi-runner-err.log
+logfile_maxbytes = 50MB
+logfile_backups = 10
+command = /usr/local/bin/uwsgi --emperor /etc/uwsgi/vassals

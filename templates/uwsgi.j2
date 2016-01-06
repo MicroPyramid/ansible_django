@@ -1,0 +1,13 @@
+[uwsgi]
+
+chdir           = /home/{{project_name}}/{{project_name}}/
+module          = {{project_name}}.wsgi
+home            = /home/{{project_name}}/env
+
+master          = true
+processes       = 4
+socket          = /home/{{project_name}}/{{project_name}}.sock
+chmod-socket    = 666
+vacuum          = true
+harakiri        = 60
+max-requests    = 5000

@@ -1,0 +1,17 @@
+- name: Creates directory
+  file: "path=/home/{{project_name}} state=directory"
+
+- name: create virtualenv and install django in it
+  pip: "name=django virtualenv=/home/{{project_name}}/env virtualenv_command=virtualenv"
+
+- name: install a django project
+  command: "/home/{{project_name}}/env/bin/django-admin.py startproject {{project_name}} chdir=/home/{{project_name}}/"
+
+#- name: setup project uwsgi configuration file
+#  template: "src=uwsgi.j2 dest=/home/{{project_name}}/{{project_name}}_uwsgi.ini"
+#- name: create a symlink of uwsgi in vassals
+#  file: "src=/home/{{project_name}}/{{project_name}}_uwsgi.ini dest=/etc/uwsgi/vassals/{{project_name}}_uwsgi.ini state=link"
+#
+#- name: touch the symlink file
+#  command: "touch /etc/uwsgi/vassals/{{project_name}}_uwsgi.ini"
+#  # file: path=/etc/uwsgi/vassals/{{project_name}}_uwsgi.ini state=touch

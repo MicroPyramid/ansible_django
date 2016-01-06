@@ -1,2 +1,6 @@
 ---
 # vars file for django
+server_port: 80
+
+vassals_dir: /etc/uwsgi/vassals
+supervisor_conf_dir: /etc/supervisor/conf.d
