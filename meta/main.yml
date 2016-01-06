@@ -12,13 +12,13 @@ galaxy_info:
     - trusty
   
   categories:
+  - system
+  - monitoring
+  - database 
+  - database:sql
   - web
 
-dependencies: 
+-dependencies: 
   - { role: update_ubuntu } 
-  #- { role: nginx } 
-  #- { role: uwsgi } 
-  #- { role: supervisor } 
   - { role: mysql_server, mysql_server_password : 'password', when: database == 'mysql' } 
   - { role: postgresql, when: database == 'postgresql' } 
-  
