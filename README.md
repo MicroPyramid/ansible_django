@@ -18,8 +18,8 @@ Example Playbook
   remote_user: root
   roles:
     - { role: micropyramid.django, project_name: 'your_project_name', server_name: 'domain_name or ip_addr', database: 'mysql or postgresql or empty' }
-    - { role: uwsgi_django_setup, project_name: 'your_project_name' }
-    - { role: nginx_django_setup, project_name: 'your_project_name' }
+    - { role: micropyramid.uwsgi_django_setup, project_name: 'your_project_name' }
+    - { role: micropyramid.nginx_django_setup, project_name: 'your_project_name' }
 
 Note: Roles uwsgi_django_setup, nginx_django_setup are optional
 
