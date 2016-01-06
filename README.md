@@ -11,6 +11,14 @@ Installs django and creates a project.
 Optionally arguments include uwsgi setup, nginx(web server), database(mysql or postgresql) and nginx setup.
 
 
+Dependencies
+-------------------------
+
+- { role: micropyramid.update_ubuntu } 
+- { role: micropyramid.mysql, mysql_server_password : 'password', when: database == 'mysql' } 
+- { role: micropyramid.postgresql, when: database == 'postgresql' } 
+
+
 Example Playbook
 -------------------------
 
