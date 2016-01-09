@@ -36,9 +36,3 @@ License
 -------
 
 MIT
-
-
-Author Information
-------------------
-
-Jagadeesh(jagadeesh@micropyramid.com), Dinesh(dinesh@micropyramid.com)
