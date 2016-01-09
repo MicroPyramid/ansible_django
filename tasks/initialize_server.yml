@@ -7,14 +7,14 @@
     - python-virtualenv
     - python-pip
     - openjdk-7-jre-headless
-    - libtiff5-dev
     - libjpeg8-dev
     - zlib1g-dev
     - libfreetype6-dev
     - liblcms2-dev
     - libwebp-dev
-    - tcl8.6-dev
-    - tk8.6-dev
+    - libtiff-dev
+    - tcl-dev
+    - tk-dev
     - python-tk
     - redis-server
     - git

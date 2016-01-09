@@ -10,6 +10,8 @@ galaxy_info:
   - name: Ubuntu
     versions:
     - trusty
+    - vivid
+    - precise
   
   categories:
   - system
@@ -19,6 +21,6 @@ galaxy_info:
   - web
 
 dependencies: 
-  - { role: micropyramid.update_ubuntu } 
-  - { role: micropyramid.mysql, mysql_server_password : 'password', when: database == 'mysql' } 
-  - { role: micropyramid.postgresql, when: database == 'postgresql' } 
+  - { role: update_ubuntu } 
+  - { role: mysql, mysql_server_password : 'password', when: database == 'mysql' } 
+  - { role: postgresql, when: database == 'postgresql' } 
