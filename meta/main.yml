@@ -18,7 +18,7 @@ galaxy_info:
   - database:sql
   - web
 
--dependencies: 
+dependencies: 
   - { role: micropyramid.update_ubuntu } 
   - { role: micropyramid.mysql, mysql_server_password : 'password', when: database == 'mysql' } 
   - { role: micropyramid.postgresql, when: database == 'postgresql' } 
