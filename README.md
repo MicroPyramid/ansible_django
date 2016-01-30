@@ -22,13 +22,8 @@ Dependencies
 Example Playbook
 -------------------------
 
-- hosts: servers
-  remote_user: root
-  roles:
-    - { role: micropyramid.django, project_name: 'your_project_name', database: 'mysql or postgresql or empty', os_release: 12.04_or_14.04_or_15.04 }
-    - { role: micropyramid.uwsgi_django_setup, project_name: 'your_project_name' }
-    - { role: micropyramid.nginx_django_setup, project_name: "your_project_name", server_name: "domain_name_or_ip_addr", server_port: "port_number" }
-
+Customize and run test.yml file 
+eg: ansible-playbook -i host_file test.yml --role-path=/your_directory
 
 Note: Roles uwsgi_django_setup, nginx_django_setup are optional
 
