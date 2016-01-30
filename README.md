@@ -23,7 +23,7 @@ Example Playbook
 -------------------------
 
 Customize and run test.yml file 
-eg: ansible-playbook -i host_file test.yml --role-path=/your_directory
+eg: ansible-playbook -i host_file test.yml --roles-path=/your_directory
 
 Note: Roles uwsgi_django_setup, nginx_django_setup are optional
 
