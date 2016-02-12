@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Jagadeesh, Dinesh
-  description: 
+  description: Deploy django over server with nginx, uwsgi and supervisor
   company: MicroPyramid
   license: MIT
   min_ansible_version: 1.2
