@@ -31,3 +31,7 @@ License
 -------
 
 MIT
+
+Visit our Django web development page `Here`_
+
+.. _Here: https://micropyramid.com/django-development-services/
